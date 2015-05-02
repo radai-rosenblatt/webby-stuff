@@ -1,0 +1,8 @@
+#IDE files
+.idea
+*.iml
+#package-management folders
+node_modules
+bower_components
+#build output
+target
