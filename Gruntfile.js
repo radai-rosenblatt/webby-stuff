@@ -64,18 +64,19 @@ module.exports = function (grunt) {
         },
         watch: {
             html: {
-                files: ['src/main/html/**'],
-                tasks: ['copy:html'],
+                files: ["src/main/html/**"],
+                tasks: ["copy:html"],
+                options: {
+                    spawn: false
+                }
+            },
+            css: {
+                files: ["src/main/css/**"],
+                tasks: ["copy:css"],
                 options: {
                     spawn: false
                 }
             }
-            //css: {
-            //
-            //},
-            //javascript: {
-            //
-            //}
         }
     });
 
