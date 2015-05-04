@@ -17,6 +17,12 @@ module.exports = function (grunt) {
                         src: "normalize.css",
                         expand: true,
                         dest: "target/exploded/css/"
+                    },
+                    {
+                        cwd: "node_modules/angular/",
+                        src: "angular.js",
+                        expand: true,
+                        dest: "target/exploded/js/"
                     }
                 ]
             },
@@ -45,11 +51,11 @@ module.exports = function (grunt) {
             javascript: {
                 files: [
                     {
-                        cwd: "src/main/jacascript/",
+                        cwd: "src/main/js/",
                         src: "**",
                         filter: "isFile",
                         expand: true,
-                        dest: "target/exploded/javascript/"
+                        dest: "target/exploded/js/"
                     }
                 ]
             }
