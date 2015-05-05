@@ -3,16 +3,15 @@
     <head>
         <meta charset="utf-8"/>
         <title>miser</title>
-        <link rel="stylesheet" href="css/normalize.css"/>
+        <!--<link rel="stylesheet" href="css/normalize.css"/>-->
         <link rel="stylesheet" href="css/style.css"/>
         <script src="js/angular.js"></script>
         <script src="js/miser.js"></script>
     </head>
     <body>
-        {{1+2}}
         <header>title and menu here</header>
         <main>
-            <table>
+            <table ng-controller="TransactionTableController as txTable">
                 <thead>
                     <tr>
                         <th>date</th>
@@ -21,10 +20,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><time>2001-01-01</time></td>
-                        <td>desc1</td>
-                        <td>100</td>
+                    <tr ng-repeat="tx in txTable.transactions">
+                        <td><time>{{tx.date}}</time></td>
+                        <td>{{tx.description}}</td>
+                        <td>{{tx.sum}}</td>
                     </tr>
                 </tbody>
                 <tfoot>

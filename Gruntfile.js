@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                     }
                 ]
             },
-            javascript: {
+            js: {
                 files: [
                     {
                         cwd: "src/main/js/",
@@ -79,6 +79,13 @@ module.exports = function (grunt) {
             css: {
                 files: ["src/main/css/**"],
                 tasks: ["copy:css"],
+                options: {
+                    spawn: false
+                }
+            },
+            js: {
+                files: ["src/main/js/**"],
+                tasks: ["copy:js"],
                 options: {
                     spawn: false
                 }
